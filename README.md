@@ -6,7 +6,7 @@
 * [Dice-racing](#Simple-dice-racing)
 
 
-## Simply dice-racing
+## Simple dice-racing
 
 * The cars move through the cells with numbers from 0 to 100
 * The car moves as many cells as there are points on the rolled dice
