@@ -25,7 +25,7 @@ Requires **Python 3** interpreter installed. Launch:
      $ python3 f1.py
 
 
-### How to enjoi it
+### How to enjoy it
 
 Cars move automatically. For example, you can place bets with a friend on the victory of one of them.
 
