@@ -18,7 +18,7 @@
 
 ### Launching the game
 
-The game files: f1/f1.py - English version, f1/f1-rus.py - Russian version
+The game files: f1.py - English version, f1-rus.py - Russian version
 
 Requires **Python 3** interpreter installed. Launch:
 
