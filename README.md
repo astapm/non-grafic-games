@@ -1,2 +1,77 @@
-# non-grafic-games
-Simple non-grafic games on Python
+# Simple non-grafic games on Python
+
+**Minimum graphic, maximum replayability**
+
+
+* [Dice-racing](#Simple-dice-racing)
+
+
+## Simply dice-racing
+
+* The cars move through the cells with numbers from 0 to 100
+* The car moves as many cells as there are points on the rolled dice
+* The dice is rolled and the cars move automatically
+* The winner is the car that first reaches the cell number 100
+* Minimal graphics -- only cell numbers are displayed
+* There is a pause between moves for the player to assess the situation
+
+
+### Launching the game
+
+The game files: f1/f1.py - English version, f1/f1-rus.py - Russian version
+
+Requires **Python 3** interpreter installed. Launch:
+
+     $ python3 f1.py
+
+
+### How to enjoi it
+
+Cars move automatically. For example, you can place bets with a friend on the victory of one of them.
+
+You can just watch the races. They are unpredictable and dramatic. Below is an example of such a race.
+
+
+```
+START
+5 3     Car A breaks away
+9 4
+15 9
+21 11
+23 14
+26 16
+29 18
+34 24
+38 26
+39 27
+42 29
+47 34   The gap reaches 13 points
+51 39   Car B starts to close the gap
+52 45
+57 46
+60 52
+61 56
+64 57
+66 59
+67 65
+69 68
+70 70   Car B catches up with the opponent
+71 74   Car B comes forward
+72 78
+76 80
+81 82
+87 87   Cars are level again
+92 88   Victory finish of car A
+98 91
+100 94
+FINISH
+```
+
+### Modification
+
+You can easily modify the game code for more cars
+
+
+## License
+
+GPLv3 2020 Astapchyk Mikhail
