@@ -1,6 +1,6 @@
 # Simple non-grafic games on Python
 
-**Minimum graphic, maximum replayability**
+**Minimum grafic, maximum replayability**
 
 
 * [Dice-racing](#Simple-dice-racing)
