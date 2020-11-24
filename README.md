@@ -29,7 +29,7 @@ Requires **Python 3** interpreter installed. Launch:
 
 Cars move automatically. For example, you can place bets with a friend on the victory of one of them.
 
-You can just watch the races. They are unpredictable and dramatic. Below is an example of such a race.
+You can just watch the races. Especially for this, a pause is made between moves. They are unpredictable and dramatic. Below is an example of such a race.
 
 
 ```
