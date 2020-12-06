@@ -35,6 +35,7 @@ You can just watch the races. Especially for this, a pause is made between moves
 
 ```
 START
+A B
 5 3     Car A breaks away
 9 4
 15 9
