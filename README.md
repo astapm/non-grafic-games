@@ -9,7 +9,7 @@ Entertainment is not the main thing in the game
 
 ## Simple dice-racing
 
-* The cars move through the cells with numbers from 0 to 100
+* The two cars move through the cells with numbers from 0 to 100
 * The car moves as many cells as there are points on the rolled dice
 * The dice is rolled and the cars move automatically
 * The winner is the car that first reaches the cell number 100
@@ -35,8 +35,8 @@ You can just watch the races. Especially for this, a pause is made between moves
 
 ```
 START
-A B
-5 3     Car A breaks away
+N1 N2
+5 3     Car 1 breaks away
 9 4
 15 9
 21 11
@@ -48,7 +48,7 @@ A B
 39 27
 42 29
 47 34   The gap reaches 13 points
-51 39   Car B starts to close the gap
+51 39   Car 2 starts to close the gap
 52 45
 57 46
 60 52
@@ -57,13 +57,13 @@ A B
 66 59
 67 65
 69 68
-70 70   Car B catches up with the opponent
-71 74   Car B comes forward
+70 70   Car 2 catches up with the opponent
+71 74   Car 2 comes forward
 72 78
 76 80
 81 82
 87 87   Cars are level again
-92 88   Victory finish of car A
+92 88   Victory finish of car 1
 98 91
 100 94
 FINISH
