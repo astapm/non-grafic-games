@@ -46,4 +46,4 @@ while (car_1 < 100) and (car_2 < 100):
     print("%3d%4d" % (car_1, car_2))
 
     
-"ФИНИШ".center(10)
+"ФИНИШ".center(7)
