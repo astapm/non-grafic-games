@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 # Game "Dice-racing"
-# The cars move through the cells with numbers from 0 to 100
+# The two cars move through the cells with numbers from 0 to 100
 # The car moves as many cells as there are points on the rolled dice
 # The dice is rolled and the cars move automatically
 # The winner is the car that first reaches the cell number 100
@@ -13,7 +13,7 @@ from random import randint
 
 # intro
 print('DICE-RACING\n'
-      '| The cars move through the cells with numbers from 0 to 100\n'
+      '| The two cars move through the cells with numbers from 0 to 100\n'
       '| The car moves as many cells as there are points on the rolled dice\n'
       '| The dice is rolled and the cars move automatically\n'
       '| The winner is the car that first reaches the cell number 100\n'
@@ -21,28 +21,28 @@ print('DICE-RACING\n'
 
 input("Enter to enjoy...\n")
 
-# car A on start cell 0
-car_a = 0
+# car 1 on start cell 0
+car_1 = 0
 
-# car B on start cell 0
-car_b = 0
+# car 2 on start cell 0
+car_2 = 0
 
 print("START")
-print("A B")
+print("%3s%4s" % ("No1","No2"))
 
 # if there are more than two cars, use the "or" operator
-while (car_a < 100) and (car_b < 100):
-
-    # rolled dice for car A
-    car_a = car_a + randint(1,6)
-
-    # rolled dice for car B
-    car_b = car_b + randint(1,6)
-
-    # display cell numbers
-    print(car_a, car_b)
+while (car_1 < 100) and (car_2 < 100):
 
     # pause to assess the location of the cars
     time.sleep(4)
+
+    # rolled dice for car 1
+    car_1 = car_1 + randint(1,6)
+
+    # rolled dice for car 2
+    car_2 = car_2 + randint(1,6)
+
+    # display cell numbers
+    print("%3d%4d" % (car_1, car_2))
     
 print("FINISH")
