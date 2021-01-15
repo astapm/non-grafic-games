@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
 # Game "Dice-racing"
 # The two cars move through the cells with numbers from 0 to 100
