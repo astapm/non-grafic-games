@@ -12,13 +12,13 @@ import time
 from random import randint
 
 # Вводим количество машин в гонке
-num_cars=0
-while(num_cars > 6) or (num_cars < 2):
-    num_cars = input("Введиите количество машин в гонке (2-6): ")
-    if num_cars.isdigit():
-        num_cars = int(num_cars)
-    else:
+num_cars = input("Введиите количество машин в гонке (2-6): ")
+if num_cars.isdigit():
+    num_cars = int(num_cars)
+    if (num_cars > 6) or (num_cars < 2):
         num_cars = 2
+else:
+    num_cars = 2
 
 # Создаём лист номеров ячеек для машинок
 list_cars = [0]
