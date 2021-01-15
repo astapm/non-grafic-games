@@ -14,7 +14,7 @@ from random import randint
 # Вводим количество машин в гонке
 num_cars=0
 while(num_cars > 6) or (num_cars < 2):
-    num_cars = input("How many cars (2-6)?: ")
+    num_cars = input("Введиите количество машин в гонке (2-6): ")
     if num_cars.isdigit():
         num_cars = int(num_cars)
     else:
@@ -30,7 +30,7 @@ list_places = [0]
 for x in range(num_cars):
     list_places.append(0)
 
-# Создаём лист номеров для номеров машинок
+# Создаём лист номеров машинок
 list_numcars = []
 for x in range(num_cars):
     temp = "#" + str(x+1)
@@ -54,25 +54,25 @@ print("START!".center(4*num_cars))
 while flag_racing:
     # Ход всех машинок
     flag_racing = 0
+
     # пауза чтобы оценить ситуацию в гонке
     time.sleep(4)
-    count = 0
-    while(count < num_cars):
-        list_cars[count] = list_cars[count] + randint(1,6)
-        if (list_cars[count] >= 100) and (list_places[count] == 0):
-            list_places[count] = places
+
+    for x in range(num_cars):
+        list_cars[x] = list_cars[x] + randint(1,6)
+        if (list_cars[x] >= 100) and (list_places[x] == 0):
+            list_places[x] = places
             flag_places = 1
             print(out_table.format(*list_places))
-        count += 1
+
     print(out_table.format(*list_cars))
     if flag_places == 1:
         places += 1
         flag_places = 0
-    count = 0
-    while(count < num_cars):
-        if list_places[count] == 0:
+
+    for x in range(num_cars):
+        if list_places[x] == 0:
             flag_racing = 1
-        count += 1
 
 print("ФИНИШ".center(4*num_cars))
 print(out_table.format(*list_places))
