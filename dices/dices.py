@@ -26,7 +26,7 @@ while choice != "q":
             point = randint(1,6)
             print("Кубик №",x," :",point)
             sum_point += point
-        print("Сумма очков всех еубиков :",sum_point,"\n")
+        print("Сумма очков всех кубиков :",sum_point,"\n")
 
 
 print("Game Over!")
