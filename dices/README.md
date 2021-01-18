@@ -1,3 +1,3 @@
 # Dices
 
-Game "The Merely dices"
+The merely dices.
