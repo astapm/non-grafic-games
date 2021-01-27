@@ -1,6 +1,6 @@
 # Simple dice-racing
 
-* The two cars move through the cells with numbers from 0 to 100
+* The cars move through the cells with numbers from 0 to 100
 * The car moves as many cells as there are points on the rolled dice
 * You can choose from 2 to 6 cars for the race
 * The dice is rolled and the cars move automatically
