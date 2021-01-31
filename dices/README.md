@@ -1,4 +1,4 @@
-# Dice
+# Command line dice game
 
 **The merely dice.**
 
