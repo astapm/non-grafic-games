@@ -1,11 +1,15 @@
 # Simple dice-racing
 
-* The two cars move through the cells with numbers from 0 to 100
+* The cars move through the cells with numbers from 0 to 100
 * The car moves as many cells as there are points on the rolled dice
+* You can choose from 2 to 6 cars for the race
 * The dice is rolled and the cars move automatically
 * The winner is the car that first reaches the cell number 100
 * Minimal graphics -- only cell numbers are displayed
 * There is a pause between moves for the player to assess the situation
+
+![dice-racing start](../fig/f11.png)
+![dice-racing end](../fig/f12.png)
 
 
 ## Launching the game
@@ -68,3 +72,4 @@ You can easily modify the game code for more cars
 ## License
 
 GPLv3 2020 Astapchyk Mikhail
+
