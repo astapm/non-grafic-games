@@ -5,7 +5,7 @@
 * You can choose from 1 to 12 hex dice 
 * After the roll, the points on the dice and the total amount of points are displayed 
 
-![dices](../fig/dices.png)
+![dices](../fig/dice.png)
 
 
 ## Launching the game
