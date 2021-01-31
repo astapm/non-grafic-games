@@ -8,8 +8,8 @@
 * Minimal graphics -- only cell numbers are displayed
 * There is a pause between moves for the player to assess the situation
 
-![dice-racing start](fig/f11.png)
-![dice-racing end](fig/f11.png)
+![dice-racing start](../fig/f11.png)
+![dice-racing end](../fig/f12.png)
 
 
 ## Launching the game
