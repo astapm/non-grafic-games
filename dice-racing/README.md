@@ -1,42 +1,37 @@
-# Простые гонки с помощью игральной кости
+# Simple dice-racing
 
-* В основе игры передвижение фишек-машинок по клеткам с помощью игрального кубика (dice}
-* Машинки ходят по клеткам с номерами от 0 до 100
-* Для гонки можно выбрать от 2 до 6 машинок
-* Машинка передвигантся на столько клеток, сколько выпадает очков на брошенном кубике
-* Кубик бросается и машинка передвигается автоматически
-* Побеждает машинка, которая первой доберётся до клетки №100
-* Минимальная графика -- вывод только номеров ячеек
-* Между ходами делается пауза, чтобы игрок оценил ситуацию
+* The cars move through the cells with numbers from 0 to 100
+* The car moves as many cells as there are points on the rolled dice
+* You can choose from 2 to 6 cars for the race
+* The dice is rolled and the cars move automatically
+* The winner is the car that first reaches the cell number 100
+* Minimal graphics -- only cell numbers are displayed
+* There is a pause between moves for the player to assess the situation
 
-![Дайс-гонки старт](../fig/f1r1.png)
-![Дайс-гонки финиш](../fig/f1r2.png)
-
-
-## Запуск игры
-
-Требуется установленный интерпретатор Python 3.
-
-Запуск английской версии:
-
-    $ python3 f1.py
-
-Запуск русской версии:
-
-    $ python3 f1-rus.py
+![dice-racing start](fig/f11.png)
+![dice-racing end](fig/f11.png)
 
 
-## Как этим насладиться
+## Launching the game
 
-Машинки передвигаются автоматически. Вы, например, можете с другом делать ставки на победу одной из них.
+The game files: f1.py - English version, f1-rus.py - Russian version
 
-Гонки можно просто наблюдать. Специально для этого делается пауза между ходами. Они обладают непредсказуемостью и драматизмом. Ниже пример такой гонки.
+Requires **Python 3** interpreter installed. Launch:
+
+     $ python3 f1.py
+
+
+## How to enjoy it
+
+Cars move automatically. For example, you can place bets with a friend on the victory of one of them.
+
+You can just watch the races. Especially for this, a pause is made between moves. They are unpredictable and dramatic. Below is an example of such a race.
 
 
 ```
 START
-№1 №2
-5 3     Машинка 1 уходит в отрыв
+N1 N2
+5 3     Car 1 breaks away
 9 4
 15 9
 21 11
@@ -47,8 +42,8 @@ START
 38 26
 39 27
 42 29
-47 34   Отрыв достигает 13 очков
-51 39   Машинка 2 начинает сокращать отрыв
+47 34   The gap reaches 13 points
+51 39   Car 2 starts to close the gap
 52 45
 57 46
 60 52
@@ -57,25 +52,24 @@ START
 66 59
 67 65
 69 68
-70 70   Машинка 2 настигает соперника
-71 74   Машинка 2 выходит вперёд
+70 70   Car 2 catches up with the opponent
+71 74   Car 2 comes forward
 72 78
 76 80
 81 82
-87 87   Машинки снова идут вровень
-92 88   Победный рывок на финише машинки 1
+87 87   Cars are level again
+92 88   Victory finish of car 1
 98 91
 100 94
 FINISH
 ```
 
+## Modification
 
-## Модификация
-
-Код игры очень простой. Вы можете легко модифицировать его для большего числа машинок
+You can easily modify the game code for more cars
 
 
-## Лицензия
+## License
 
-GPLv3 2020 Астапчик Михаил
+GPLv3 2020 Astapchyk Mikhail
 
