@@ -1,18 +1,20 @@
-# Dices
+# Dice
 
-The merely dices.
+**The merely dice.**
 
+* You can choose from 1 to 12 hex dice 
+* After the roll, the points on the dice and the total amount of points are displayed 
 
 ![dices](../fig/dices.png)
 
 
 ## Launching the game
 
-The game files: `dices.py` - English version, `dices-rus.py` - Russian version
+The game files: `dice.py` - English version, `dice-rus.py` - Russian version
 
 Requires **Python 3** interpreter installed. Launch:
 
-     $ python3 dices.py
+     $ python3 dice.py
  
  
  ## License
