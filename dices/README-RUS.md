@@ -11,11 +11,11 @@
 
 Запуск английской версии:
 
-    $ python3 dices.py
+    $ python3 dice.py
 
 Запуск русской версии:
 
-    $ python3 dices-rus.py
+    $ python3 dice-rus.py
 
 ## Лицензия
 
