@@ -1,6 +1,6 @@
 # Command line dice
 
-**The merely dice.**
+**The merely dice. If you need dic for some other games **
 
 
 ## dice.py
