@@ -12,4 +12,4 @@ Entertainment is not the main thing in the game
 
 ## License
 
-GPLv3 2020 Astapchyk Mikhail
+GPLv3 2020-21 Astapchyk Mikhail
