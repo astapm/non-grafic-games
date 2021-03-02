@@ -38,6 +38,15 @@ turns = []
 # Погода
 weather = ""
 
+# Место на финише -- инкременируется после каждого хода с пересечением финиша
+places = 1
+
+# Флаг пересечения финиша 
+flag_places = 0
+
+# Число секунд паузы между ходами
+sleep = 4
+
 # Список названий команд и их трёхбуквенных сокращений
 names_teams = ["Мерседес", "Феррари", "Рено", "Ред Булл", "МакЛарен", "Маруся"]
 short_names_teams = ["Мер", "Фер", "Рен", "Ред", "Мак", "Мар"]
@@ -46,10 +55,43 @@ short_names_teams = ["Мер", "Фер", "Рен", "Ред", "Мак", "Мар"]
 # Список номеров машин 
 numers = list(range(1, num_cars + 1))
 # numers = list(n for n in range(num_cars))
-names = []
-short_names = []
-tires = []
-cells = []
-end_point = []
+teams = names_teams[:num_cars]
+# teams = [names_teams[x] for x in range(num_cars)]
+short_names = short_names_teams[:num_cars]
+tires = [None]*num_cars
+# tires = [None for _ in range(num_cars)]
+cell = [0]*num_cars
+end_cell = [None]*num_cars
+transmission = [None]*num_cars
+end_transmission = [None]*num_cars
+status = [" "]*num_cars
+tires_degradation = [None]*num_cars
+end_rolls = [None]*num_cars
 
+# Создаём шаблон полей для вывода в табличном виде номеров ячеек и инфо-строки
+out_table = "{:>3}"+"{:>4}"*(num_cars - 1)
+
+# Начало игры
+flag_racing = 1 # флаг гонки вверху
+
+def roll(x):
+    return x + randint(1,6)
+
+print("В гонке участвуют",num_cars,"машин")
+print(out_table.format(*numers)) # выводим номера машин
+print(out_table.format(*short_names)) # выводим короткие названия
+print("СТАРТ!".center(4*num_cars))
+
+while " " in status:
+    # пауза чтобы оценить ситуацию в гонке
+    time.sleep(4)
+    for x in range(num_cars):
+        if cell[x] < 100:
+            cell[x] = cell[x] + randint(1,6)
+        else:
+            status[x] = "F"
+    # cell = map(roll, cell)
+    # cell = [points + randint(1,6) for points in cell if int(points) < 100]
+    print(out_table.format(*cell))  # вывод информации о позиции на трассе
+    print(out_table.format(*status)) # вывод информации о местах на финише
 
