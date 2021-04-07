@@ -49,7 +49,7 @@ sleep = 4
 
 # Список названий команд и их трёхбуквенных сокращений
 names_teams = "Мерседес", "Феррари", "Рено", "Ред Булл", "МакЛарен", "Маруся"
-short_names_teams = "МРСc", "ФЕР", "РЕН", "РБЛ", "МКЛ", "МАР"
+short_names_teams = "МРС", "ФЕР", "РЕН", "РБЛ", "МКЛ", "МАР"
 
 ## Создаём таблицу заезда
 
@@ -92,14 +92,18 @@ end_transmission = [None]*num_cars
 # Деградация шин
 tires_degradation = [None]*num_cars
 
-# Статус машины в гонке
+# Инфо-статус машины в гонке
+# Ф - финиш; С - пит-стоп; З - занос на повороте
 status = [" "]*num_cars
+
+# Флаги финиша машинок
+flags_finish = [False]*num_cars
 
 ## Создаём шаблон полей для вывода в табличном виде номеров ячеек и инфо-строки
 out_table = "{:>3}"+"{:>4}"*(num_cars - 1)
 
 ## Начало игры
-flag_racing = 1 # флаг гонки вверху
+flags_racing = 1 # флаг гонки вверху
 
 ## Функция броска игральной кости и передвижение по клеткам
 def roll(x):
@@ -110,16 +114,22 @@ print(out_table.format(*numers)) # выводим номера машин
 print(out_table.format(*short_names)) # выводим короткие названия
 print("СТАРТ!".center(4*num_cars))
 
-while " " in status:
-    # пауза чтобы оценить ситуацию в гонке
+while False in flags_finish:
+    # Пауза чтобы оценить ситуацию в гонке
     time.sleep(4)
+    # Очищаем информационную строку таблицы заезда
+    status = [" "]*num_cars
     # Бросаем кубик и передвигаем машинку
     for x in range(num_cars):
         if cell[x] < track_cells:
             cell[x] = cell[x] + randint(1,6)
-        else:
-            status[x] = "F"
+            if cell[x] >= track_cells:
+                status[x] = "Ф"
+                flags_finish[x] = True
     # cell = map(roll, cell)
     # cell = [points + randint(1,6) for points in cell if int(points) < 100]
     print(out_table.format(*cell))  # вывод информации о позиции на трассе
     print(out_table.format(*status)) # вывод информации о местах на финише
+
+print("ФИНИШ".center(4*num_cars))
+
