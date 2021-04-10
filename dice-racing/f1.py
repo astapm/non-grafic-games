@@ -38,11 +38,15 @@ turns = []
 # Погода
 weather = ""
 
+## Параметры гонки
+# Счётчтк ходов
+step = 0
+
 # Место на финише -- инкременируется после каждого хода с пересечением финиша
-places = 1
+# places = 
 
 # Флаг пересечения финиша 
-flag_places = 0
+# flag_places = 0
 
 # Число секунд паузы между ходами для оценки ситуации на трассе
 sleep = 4
@@ -52,18 +56,22 @@ names_teams = "Мерседес", "Феррари", "Рено", "Ред Булл
 short_names_teams = "МРС", "ФЕР", "РЕН", "РДБ", "МКЛ", "МАР"
 
 ## Создаём таблицу заезда
+# Колл-во колонок = количество выбраных в гонке мащин (num_cars)
 
-# Номер машины
-# Команда
-# Краткое имя команды
-# Текущие шины
-# Деградация шин
-# Текущая клетка
-# Финишная клетка
-# Текущая передача
-# Финишная передача
-# Статус машины в гонке
-# Флаги финиша машинок
+#_______________________|_*num_cars_|
+# Номер машины          |     1     |
+# Команда               |  Мерседес |
+# Краткое имя команды   |     МРС   |
+# Шинная стратегия      |  H-S-SS-H |
+# Текущие шины          |     H     |
+# Деградация шин        |     30    |
+# Текущая клетка        |     102   |
+# Текущая передача      |     4     |
+# Статус машины в гонке |     Ф     |
+# Флаги финиша машинок  |    True   |
+# Количество ходов      |     31    |
+# Место на финише       |     1     |
+#-----------------------------------
 
 # Список номеров машин 
 numers = list(range(1, num_cars + 1))
@@ -78,19 +86,16 @@ short_names = short_names_teams[:num_cars]
 tires = [None]*num_cars
 # tires = [None for _ in range(num_cars)]
 
-# Текущая клетка
-cell = [0]*num_cars
+# Шинная стратегия
+tires_strtgy = ["H", "S", "SS", "H]"]
 
-# Финишная клетка
-end_cell = [None]*num_cars
+# Текущая клетка
+cells = [0]*num_cars
 
 # Текущая передача/скорость
-transmission = [None]*num_cars
+transmissions = [None]*num_cars
 
-# Передача/скорость на финише
-end_transmission = [None]*num_cars
-
-# Деградация шин
+# Деградация шин -- кол-во ходов до деградации
 tires_degradation = [None]*num_cars
 
 # Инфо-статус машины в гонке
@@ -99,6 +104,12 @@ status = [" "]*num_cars
 
 # Флаги финиша машинок
 flags_finish = [False]*num_cars
+
+# Текущее количество ходов
+steps = [0]*num_cars
+
+# Место на финише
+places = [None]*num_cars
 
 ## Создаём шаблон полей для вывода в табличном виде номеров ячеек и инфо-строки
 out_table = "{:>3}"+"{:>4}"*(num_cars - 1)
@@ -116,21 +127,36 @@ print(out_table.format(*short_names)) # выводим короткие назв
 print("СТАРТ!".center(4*num_cars))
 
 while False in flags_finish:
+    # Счётчтк ходов
+    step = step + 1
     # Пауза чтобы оценить ситуацию в гонке
     time.sleep(4)
     # Очищаем информационную строку таблицы заезда
     status = [" "]*num_cars
     # Бросаем кубик и передвигаем машинку
     for x in range(num_cars):
-        if cell[x] < track_cells:
-            cell[x] = cell[x] + randint(1,6)
-            if cell[x] >= track_cells:
+        if cells[x] < track_cells:
+            prev_cell = cells[x]
+            cells[x] = cells[x] + randint(1,6)
+            transmissions[x] = cells[x] - prev_cell
+            steps[x] = step
+            if cells[x] >= track_cells:
                 status[x] = "Ф"
                 flags_finish[x] = True
     # cell = map(roll, cell)
     # cell = [points + randint(1,6) for points in cell if int(points) < 100]
-    print(out_table.format(*cell))  # вывод информации о позиции на трассе
+    print(out_table.format(*cells))  # вывод информации о позиции на трассе
     print(out_table.format(*status)) # вывод информации о местах на финише
 
 print("ФИНИШ".center(4*num_cars))
+
+
+print("Финишная таблица:")
+print(out_table.format(*numers)) # выводим номера машин
+print(out_table.format(*short_names)) # выводим короткие названия
+print(out_table.format(*transmissions)) # выводим короткие названия
+print(out_table.format(*steps)) # выводим короткие названия
+print(out_table.format(*cells)) # выводим короткие названия
+
+
 
