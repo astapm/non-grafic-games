@@ -31,6 +31,14 @@ Requires **Python 3** interpreter installed. Launch:
 * You can choose from 1 to 12 hex dice 
 
 
+## dice.py
+
+Dice on bash
+
+    echo -e "1\n2\n3\n4\n5\n6" | shuf -n1
+
+
+
  ## License
 
 GPLv3 2021 Astapchyk Mikhail
