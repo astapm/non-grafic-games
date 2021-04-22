@@ -31,7 +31,7 @@ Requires **Python 3** interpreter installed. Launch:
 * You can choose from 1 to 12 hex dice 
 
 
-## dice.py
+## dice.sh
 
 Dice on bash
 
