@@ -1,4 +1,4 @@
-# Simple non-grafic games on Python
+# Simple non-grafic games on Python, Bash etc.
 
 **Minimum grafic, maximum replayability**  
 Entertainment is not the main thing in the game
